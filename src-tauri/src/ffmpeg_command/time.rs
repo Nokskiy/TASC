@@ -1,7 +1,7 @@
 use std::fmt;
 use std::ops::Add;
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Time {
     h: u8,
     m: u8,
@@ -22,6 +22,8 @@ impl fmt::Display for Time {
     }
 }
 //Addition only: no subtraction is required in the project.
+
+impl Copy for Time {}
 
 impl Add for Time {
     type Output = Time;
@@ -63,6 +65,7 @@ impl Add for Time {
 
 #[test]
 fn test_add() {
+    println!("TEST ADD");
     let t1 = Time::from(2, 5, 40, 60);
     let t2 = Time::from(0, 2, 0, 50);
     let sum = t1 + t2;
