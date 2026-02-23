@@ -2,6 +2,7 @@ use crate::ffmpeg_command::time::Time;
 
 pub struct Command {
     pub start_time: Time,
+    pub stick_lenght: Time,
 }
 
 impl Command {
