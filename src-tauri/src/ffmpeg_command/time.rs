@@ -28,7 +28,7 @@ impl Copy for Time {}
 impl Add for Time {
     type Output = Time;
     fn add(self, other: Time) -> Time {
-        let mut new_ms: u8 = 0;
+        let new_ms: u8;
         let mut new_s: u8 = 0;
         let mut new_m: u8 = 0;
         let mut new_h: u8 = 0;
